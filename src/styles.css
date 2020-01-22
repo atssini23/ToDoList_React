@@ -1,4 +1,25 @@
 .App {
   font-family: sans-serif;
   text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background: lightsalmon;
+}
+
+button {
+  background: lightblue;
+  border-radius: 25px;
+  margin: 10px;
+}
+
+add-btn {
+  background: lightgreen;
+  width: 40px;
+  height: 40px;
+}
+
+input {
+  border-radius: 5px;
 }
