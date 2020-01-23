@@ -5,21 +5,21 @@
 }
 
 body {
-  background: light;
+  background: rgb(224, 243, 243);
 }
+
 #app-title {
   color: lightskyblue;
   font-size: 50px;
 }
 
-button {
+.btn-primary {
   background: lightblue;
   border-radius: 25px;
   margin: 10px;
 }
 
-add-btn {
-  background: lightgreen;
+.btn-danger {
   width: 40px;
   height: 40px;
 }
@@ -33,6 +33,7 @@ input {
 }
 
 #contain {
-  border: 5px solid pink;
+  border: 5px solid;
   border-radius: 25px;
+  margin: 0 100px 0 100px;
 }

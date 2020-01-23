@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./styles.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 class App extends Component {
   constructor(props) {
@@ -65,7 +66,7 @@ class App extends Component {
           />
           <button
             type="button"
-            //class="btn btn-primary"
+            class="btn btn-primary"
             onClick={() => this.addItem()}
           >
             +
@@ -76,7 +77,13 @@ class App extends Component {
               return (
                 <li key={item.id}>
                   {item.value}
-                  <button onClick={() => this.deleteItem(item.id)}>x</button>
+                  <button
+                    type="button"
+                    class="btn btn-danger"
+                    onClick={() => this.deleteItem(item.id)}
+                  >
+                    x
+                  </button>
                 </li>
               );
             })}
