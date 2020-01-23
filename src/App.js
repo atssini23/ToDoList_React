@@ -46,6 +46,7 @@ class App extends Component {
 
     this.setState({ list: updatedList });
   }
+
   render() {
     return (
       <div className="Apps">
@@ -59,6 +60,7 @@ class App extends Component {
           <input
             type="text"
             placeholder="Type item here"
+            value={this.state.newItem} //deletes placeholder when new item is added
             onChange={e => this.updateInput("newItem", e.target.value)}
           />
           <button
