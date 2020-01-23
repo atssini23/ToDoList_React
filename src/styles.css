@@ -1,11 +1,15 @@
-.App {
+.Apps {
   font-family: sans-serif;
   text-align: center;
   font-family: "Montserrat", sans-serif;
 }
 
 body {
-  background: lightsalmon;
+  background: light;
+}
+#app-title {
+  color: lightskyblue;
+  font-size: 50px;
 }
 
 button {
@@ -22,4 +26,13 @@ add-btn {
 
 input {
   border-radius: 5px;
+}
+
+#list {
+  list-style: none;
+}
+
+#contain {
+  border: 5px solid pink;
+  border-radius: 25px;
 }
