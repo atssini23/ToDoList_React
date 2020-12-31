@@ -43,15 +43,24 @@ class App extends Component {
     const list = [...this.state.list];
 
     //list out itme being deleted
-    const updatedList = list.filter(item => item.id !== id);
+    const updatedList = list.filter((item) => item.id !== id);
 
     this.setState({ list: updatedList });
+  }
+  completeItem(setState) {
+    const list = [...this.state.list];
+
+    const completedList = list.filter((item) => item.setState !== setState);
+
+    this.setState({ list: completedList });
   }
 
   render() {
     return (
       <div className="Apps">
-        <div id="app-title">MY LIST</div>
+        <div id="app-title">
+          todo<b>list</b>
+        </div>
         <br />
 
         <div id="contain">
@@ -62,27 +71,35 @@ class App extends Component {
             type="text"
             placeholder="Type item here"
             value={this.state.newItem} //deletes placeholder when new item is added
-            onChange={e => this.updateInput("newItem", e.target.value)}
+            onChange={(e) => this.updateInput("newItem", e.target.value)}
           />
           <button
             type="button"
-            class="btn btn-primary"
+            className="btn btn-primary"
             onClick={() => this.addItem()}
           >
             +
           </button>
 
           <ul id="list">
-            {this.state.list.map(item => {
+            {this.state.list.map((item) => {
               return (
                 <li key={item.id}>
                   {item.value}
                   <button
                     type="button"
-                    class="btn btn-danger"
+                    id="colorChangeOnClick"
+                    className="btn btn-success"
+                    onClick={() => this.completeItem(item.id)}
+                  >
+                    &#x2713;
+                  </button>
+                  <button
+                    type="button"
+                    className="btn btn-danger"
                     onClick={() => this.deleteItem(item.id)}
                   >
-                    x
+                    &#xff38;
                   </button>
                 </li>
               );
