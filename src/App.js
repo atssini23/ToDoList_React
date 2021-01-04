@@ -35,7 +35,8 @@ class App extends Component {
     //update stat with new list and reset newItem input
     this.setState({
       list,
-      newItem: ""
+      newItem: "",
+      backgroundcolor: ""
     });
   }
   deleteItem(id) {
@@ -52,7 +53,7 @@ class App extends Component {
 
     const completedList = list.filter((item) => item.setState !== setState);
 
-    this.setState({ list: completedList });
+    this.setState({ list: completedList, backgroundcolor: "#FF0000" });
   }
 
   render() {
